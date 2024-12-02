@@ -84,10 +84,10 @@ const ContactList = () => {
           </div>
         </div>
       ) : (
-        <ul className="d-flex flex-column m-2">
+        <div className="row row-cols-2 justify-content-center m-2">
           {state.contacts.map((contact, index) => (
             <li className="list-group-item m-2" key={index}>
-              <div className="card mb-3" style={{ maxWidth: "540px" }}>
+              <div className="card mb-3" style={{ maxWidth: "100vw" }}>
                 <p
                   onClick={() => removeContact(contact.id)}
                   className="d-flex justify-content-end pe-2"
@@ -105,7 +105,7 @@ const ContactList = () => {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <ul className="list-group list-group-">
+                      <ul className="list-group">
                         <li className="list-group-item">{contact.name}</li>
                         <li className="list-group-item">
                           <i className="fa-regular fa-envelope me-2"></i>{" "}
@@ -133,7 +133,7 @@ const ContactList = () => {
               </div>
             </li>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
